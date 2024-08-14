@@ -24,6 +24,7 @@ export interface ExcaliBrainSettings {
   compactView: boolean;
   compactingFactor: number;
   minLinkLength: number;
+  defaultMaxLabelLength:boolean
   excalibrainFilepath: string;
   indexUpdateInterval: number;
   hierarchy: Hierarchy;
@@ -91,6 +92,7 @@ export const DEFAULT_SETTINGS: ExcaliBrainSettings = {
   compactView: false,
   compactingFactor: 1.5,
   minLinkLength: 18,
+  defaultMaxLabelLength:false,
   excalibrainFilepath: "excalibrain.md",
   indexUpdateInterval: 5000,
   hierarchy: DEFAULT_HIERARCHY_DEFINITION,
@@ -1859,6 +1861,16 @@ export class ExcaliBrainSettingTab extends PluginSettingTab {
       false,
       1,
     )
+    new Setting(containerEl)
+      .setName(t("Fixed_DEFAULT_MAX_LABEL_LENGTH"))
+      .setDesc(fragWithHTML(t("Fixed_DEFAULT_MAX_LABEL_LENGTH_DESC")))
+      .addToggle(toggle => toggle
+        .setValue(this.plugin.settings.defaultMaxLabelLength)
+        .onChange(value => {
+          this.plugin.settings.defaultMaxLabelLength = value;
+          this.dirty = true;
+        })
+      )    
 
     new Setting(containerEl)
       .setName(t("SHOW_FULL_TAG_PATH_NAME"))

@@ -54,6 +54,7 @@ export class Layout {
         : getRowLayout(itemCount % columns).map(idx => idx ? sortedNodes[i*columns+idx-1]:null));
   }
 
+
   async render() {
     this.layout();
     const rows = this.renderedNodes.length;

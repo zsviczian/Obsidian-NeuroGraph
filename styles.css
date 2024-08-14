@@ -39,7 +39,7 @@
   .excalibrain-buttons {
     pointer-events: none;
     margin-top: 0.3em;
-    max-width: 37em;
+    max-width: 50em;
     justify-content: space-between;
   }
 
@@ -97,6 +97,20 @@
     pointer-events: none;
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+  .excalibrain-slider {
+    pointer-events: all;
+    vertical-align: middle;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-left: 0.3em !important;
+    margin-right: 0px !important;
+    width: 4.8em !important;
+    justify-content: center !important;
+    align-self: center;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
 }
 
 /* -----------
