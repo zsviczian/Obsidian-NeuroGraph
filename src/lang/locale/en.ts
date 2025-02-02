@@ -16,7 +16,7 @@ export default {
                            "Because frequent background index updates can be resource intensive you have an option to increase the time interval for the index-updates which in turn will reduce the " +
                            "overhead on your system.",
   HIERARCHY_HEAD: "Ontology",
-  HIERARCHY_DESC: "Ontology, in the the heart of Excalibrain. It is the context of our knowledge graph and refers to a system for organizing and defining the relationships between different nodes in the graph. " +
+  HIERARCHY_DESC: "Ontology, the heart of Excalibrain. It is the context of our knowledge graph and refers to a system for organizing and defining the relationships between different nodes in the graph. " +
     "It allows us to add semantic meaning to connections by associating them with specific Dataview fields, such as 'author' or 'chapter,' which influence the way nodes are positioned relative to each other on the graph. " +
     "This approach enables a more structured and meaningful representation of information, making it easier to understand and explore the interconnectedness of concepts within the markdown documents in your Vault.<br><br>" +
     "Enter the field names separated by comma (,) that you will use to define links in your graph.<br><br>" +
